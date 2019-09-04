@@ -1,0 +1,80 @@
+body,html{
+    padding:0;
+    margin: 0;
+    display: grid;
+    background-color: rgb(200, 240, 200);
+}
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: mediumseagreen;
+    position: fixed;
+    z-index: 100;
+}
+
+.main{
+    width: 100%;
+    margin-top: 8em; 
+    display: grid;
+    grid-template-columns: .75fr 1.5fr 1fr .75fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 1em;
+    grid-template-areas: ". left right .";
+}
+
+
+
+
+
+/*
+    THE POSTS
+*/
+
+.left{
+    grid-area: left;
+    background-color: forestgreen;
+}
+
+.post{
+    min-height: 200px;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.post_sidebar{
+    position: absolute;
+    width:50px;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color: palegreen;
+    z-index: 15;
+}
+
+.post_bottombar{
+    position: absolute;
+    width:100%;
+    height: 50px;
+    bottom:0;
+    left: 0;
+    background-color: mediumseagreen;
+    z-index: 10;
+}
+
+
+/*
+    THE WIDGET
+*/
+
+.right{
+    grid-area: right;
+    background-color: darkgreen;
+}
+
+.widget{
+    min-height: 10px;
+    width:100%;
+    background-color: seagreen;
+    margin-bottom: 2em;
+}
